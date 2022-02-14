@@ -59,9 +59,6 @@ export default {
   }),
   methods: {
     async createdCD() {
-      setTimeout(()=>{
-        document.getElementById("load").classList.add("hidden");
-      }, 5000)
       const response = await fetch("https://strapi.martialescudero.com/musics?_sort=Name:ASC,Date:DESC&Album_eq=true");
       const dataArtists = await response.json();
       for (var x = 0; x < dataArtists.length; x++) {
@@ -78,6 +75,9 @@ export default {
         this.musicsCD.push(
           {name : CDname, title: CDtitle, cover: CDcover}
         )
+        if (i == this.artistsCD.length-1) {
+          document.getElementById("load").classList.add("hidden");
+        }
       }
     },
     async createdVinyl() {
