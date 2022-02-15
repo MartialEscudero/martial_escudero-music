@@ -3,12 +3,12 @@
     <div class="mb-4 border-b border-gray-200 dark:border-gray-700">
       <ul class="flex flex-wrap -mb-px" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
         <li class="mr-2" role="presentation">
-            <button class="active inline-block py-4 px-4 text-sm font-medium text-center text-gray-500 rounded-t-lg hover:text-white" id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="true">
+            <button class="active inline-block py-4 px-4 text-sm font-medium text-center rounded-t-lg hover:text-white" id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="true">
               ALBUMS
             </button>
         </li>
         <li class="mr-2" role="presentation">
-            <button class="inline-block py-4 px-4 text-sm font-medium text-center text-gray-500 rounded-t-lg hover:text-white" id="settings-tab" data-tabs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">
+            <button class="inline-block py-4 px-4 text-sm font-medium text-center rounded-t-lg hover:text-white" id="settings-tab" data-tabs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">
               VINYLES
             </button>
         </li>
@@ -113,7 +113,6 @@ p {
 }
 
 .active {
-  color: white;
-  border-bottom: 1px solid white;
+  border-bottom: 2px solid white;
 }
 </style>
