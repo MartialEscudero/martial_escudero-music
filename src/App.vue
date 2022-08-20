@@ -3,7 +3,7 @@
         <div class="block">
             <div class="border-b border-gray-200">
                 <nav class="flex justify-center md:justify-start text-lg" aria-label="Tabs">
-                    <a v-for="tab in tabs" :key="tab.name" @click="setCurrent(tab)" :class="[tab.current ? 'border-white text-white' : 'border-transparent text-blue-300 hover:text-blue-400 hover:border-white transition duration-200 ', 'whitespace-nowrap py-4 px-5 border-b-2 font-medium text-sm cursor-pointer']" :aria-current="tab.current ? 'page' : undefined">
+                    <a v-for="tab in tabs" :key="tab.name" @click="setCurrent(tab)" :class="[tab.current ? 'border-white' : 'text-slate-500 border-transparent hover:border-white transition duration-200 ', 'whitespace-nowrap py-4 px-5 border-b-2 font-medium text-sm cursor-pointer']" :aria-current="tab.current ? 'page' : undefined">
                         {{ tab.name }}
                     </a>
                 </nav>
@@ -20,8 +20,8 @@
                 </div>
                 <div class="container mx-auto grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
                     <div class="mx-auto card" v-for="musicVinyl in musicsVinyl" :key="musicVinyl.item">
-                        <img v-if="musicVinyl.cover != ''" height="300px" width="300px" :src="musicVinyl.cover" class="hover:scale-105 transition duration-200 cursor-pointer">
-                        <img v-else height="300px" width="300px" src="https://res.cloudinary.com/do5ghqhjj/image/upload/v1644873225/error_Cover_108159151f.jpg" class="hover:scale-105 transition duration-200 cursor-pointer">
+                        <img v-if="musicVinyl.cover != ''" height="300px" width="300px" :src="musicVinyl.cover" class="w-full hover:scale-105 transition duration-200 cursor-pointer">
+                        <img v-else height="300px" width="300px" src="https://res.cloudinary.com/do5ghqhjj/image/upload/v1644873225/error_Cover_108159151f.jpg" class="w-full hover:scale-105 transition duration-200 cursor-pointer">
                         <p class="mt-6 text-base xl:text-sm"><span class="font-bold">{{musicVinyl.name}}</span> - <span class="italic">{{musicVinyl.title}}</span></p>
                     </div>
                 </div>
@@ -38,8 +38,8 @@
                 </div>
                 <div class="container mx-auto grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
                     <div class="mx-auto card" v-for="musicCD in musicsCD" :key="musicCD.item">
-                        <img v-if="musicCD.cover != ''" height="300px" width="300px" :src="musicCD.cover" class="hover:scale-105 transition duration-200 cursor-pointer">
-                        <img v-else height="300px" width="300px" src="https://res.cloudinary.com/do5ghqhjj/image/upload/v1644873225/error_Cover_108159151f.jpg" class="hover:scale-105 transition duration-200 cursor-pointer">
+                        <img v-if="musicCD.cover != ''" height="300px" width="300px" :src="musicCD.cover" class="w-full hover:scale-105 transition duration-200 cursor-pointer">
+                        <img v-else height="300px" width="300px" src="https://res.cloudinary.com/do5ghqhjj/image/upload/v1644873225/error_Cover_108159151f.jpg" class="w-full hover:scale-105 transition duration-200 cursor-pointer">
                         <p class="mt-6 text-base xl:text-sm"><span class="font-bold">{{musicCD.name}}</span> - <span class="italic">{{musicCD.title}}</span></p>
                     </div>
                 </div>
